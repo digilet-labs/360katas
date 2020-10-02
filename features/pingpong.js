@@ -78,7 +78,9 @@ module.exports = function(controller) {
 
     controller.on('direct_message', async (bot, message) => {
         await bot.reply(message, helloMessage)
-        await slackService.postMessageReviewedMessage(message.internal_user.teamId.slackWorkspaceName, message.internal_user.slackDisplayName, message.text)
-        amplitudeService.logEvent(amplitudeService.EVENT_NAMES.SENT_MESSAGE, message.internal_user, { message: message.text })
+        if(message.internal_user){
+            await slackService.postMessageReviewedMessage(message.internal_user.teamId.slackWorkspaceName, message.internal_user.slackDisplayName, message.text)
+            amplitudeService.logEvent(amplitudeService.EVENT_NAMES.SENT_MESSAGE, message.internal_user, { message: message.text })
+        }
     })
 }

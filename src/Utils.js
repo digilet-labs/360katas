@@ -56,8 +56,8 @@ let getAnonymousEmoji = function(index){
 
 let randomScheduledTime = function(){
   let dateNow = Date.now()
-  let min = 15
-  let max = 31
+  let min = 5
+  let max = 15
   let randomx =  Math.floor(Math.random() * (max - min) + min); 
   return dateNow + randomx * 60 * 1000
 }

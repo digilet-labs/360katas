@@ -178,8 +178,9 @@ let sendResponseSentMessage = async function(bot, user, responses, feedbackReq){
     let message = messageView.getResponseSentMessage(feedbackReq, responses, user)
     await bot.startPrivateConversation(user.slackId)
     let data = await bot.say(message)
+    await messageController.addMessage(user.id, Constants.MESSAGE_TYPE.RESPOND_MESSAGE, feedbackReq.id, data, message)
     if(!user || (user && user.userEvents && !user.userEvents.includes(Constants.USER_EVENTS.FEEDBACK_SENT))){
-        await messageController.addMessage(user.id, Constants.MESSAGE_TYPE.RESPOND_MESSAGE, feedbackReq.id, data, message)
+        await userController.addUserEvents(user.id, Constants.USER_EVENTS.FEEDBACK_SENT)
     }
     amplitudeService.logEvent(amplitudeService.EVENT_NAMES.RECEIVED_MESSAGE_RESPONSE_SENT, user)
 }

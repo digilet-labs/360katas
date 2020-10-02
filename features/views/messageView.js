@@ -138,13 +138,13 @@ let getIncomingFeedbackRequestMessage = function(feedbackReq, userFor, isRespons
 
 let getFirstTimeMessage = function(name, isFeedbackSent = false){
     let message = {
-        "text": `Hey ${name},\nWelcome to 360Katas!\n\nWith 360Katas, you can seek feedback from your co-workers and use it to plan your development goals.\n\n360Katas is designed for individuals and not for company's performance review. Everything here is visible only to you!\n\nGet started by tapping 'Seek Feedback'👇!`,
+        "text": `Hey ${name},\nWelcome to 360Katas!\n\nWith 360Katas, you can seek feedback from your co-workers and use it to plan your development goals.\n\n360Katas is designed for individuals and not for company's performance review. Everything here is visible only to you!\n\nGet started by tapping 'Seek Feedback', or chat with us if you have any questions!`,
         "blocks": [
             {
                 "type": "section",
                 "text": {
                     "type": "mrkdwn",
-                    "text": `Hey ${name},\nWelcome to 360Katas!\n\nWith 360Katas, you can *seek feedback* from your co-workers and use it to *plan your development goals*.\n\n360Katas is *designed for individuals and not for company's performance review*. Everything here is visible only to you!\n\nGet started by tapping \`Seek Feedback\`👇`
+                    "text": `Hey ${name},\nWelcome to 360Katas!\n\nWith 360Katas, you can *seek feedback* from your co-workers and use it to *plan your development goals*.\n\n360Katas is *designed for individuals and not for company's performance review*. Everything here is visible only to you!\n\nGet started by tapping \`Seek Feedback\`, or chat with us if you have any questions!`
                 }
             },
             {
@@ -153,12 +153,21 @@ let getFirstTimeMessage = function(name, isFeedbackSent = false){
                     {
                         "text": {
                             "type": "plain_text",
-                            "text": "Seek Feedback",
+                            "text": ":rocket: Seek Feedback",
                             "emoji": true
                         },
                         "type": "button",
                         "value": "app_home.start",
                         "action_id": "app_home.start"
+                    },
+                    {
+                        "type": "button",
+                        "text": {
+                            "type": "plain_text",
+                            "text": "ℹ️ Live Chat",
+                            "emoji": true
+                        },
+                        "url": `https://360katas.com/faqs?uid=dschqoij23099jcnksdncio1enf1oilksdcn1oi3neon`
                     }
                 ]
             }
