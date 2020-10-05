@@ -12,7 +12,7 @@ The above problems are addressed by offering the ability to seek clarifications 
 
 Features yet to be built:
 - Implement the app on Microsoft Teams, Google chat, Telegram and on the Web. 
-- Create a learning community (on Tribe.so, or Cirlce.so) where people can meet others like them who are working on similar goals so that they can all work together.  
+- Create a learning community (on Tribe.so, or Circle.so) where people can meet others like them who are working on similar goals so that they can all work together.  
 - Build an AI coach that helps people work towards their self-development goals. 
 
 If you are interested in contributing to the project in any manner (Product ideas, Marketing, Software Development, anything else), please do write to us at hi (at) 360katas.com 
