@@ -1,7 +1,7 @@
 # 360Katas
 
 360Katas helps users **discover self-development goals** using the **principles of 360 degree feedback methodology**, namely, 
-1. Seek feedback from everyone around us - Managers, Peers, Subordinates - and not just Managers, and 
+1. Seek **feedback from everyone** around us - Managers, Peers, Subordinates - and not just Managers, and 
 2. Encourage the respondents to give **honest feedback** by creating safety of anonymity to them. 
 
 While 360Katas leverages the virtues of 360 degree feedback system it also addresses its challenges like..
